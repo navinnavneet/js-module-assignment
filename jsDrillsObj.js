@@ -77,9 +77,7 @@ Q5. Add a new Object in the fourth postiion.
 
 // Q. 1
 
-const data1 = [...data];
-/*
-const result1 = data1.reduce((acc, cv) => {
+const result1 = data.reduce((acc, cv) => {
   const { place, location, ...rest } = cv;
   const newPlace = {};
   newPlace[place] = [location.lat, location.lng];
@@ -87,25 +85,21 @@ const result1 = data1.reduce((acc, cv) => {
   return acc;
 }, []);
 
-console.log(result1);
-*/
+// console.log(result1);
 // Q. 2
 
-/*
+const data1 = data.slice(0);
 function getTemp(str) {
   return parseInt(str.split(" ")[0]);
 }
 
 data1.sort((a, b) => getTemp(a.temperature) - getTemp(b.temperature));
 
-console.log(data1);
-*/
+// console.log(data1);
 
 // Q. 3
-/*
-const data2 = [...data];
 
-const result3 = data2.reduce((acc, cv) => {
+const result3 = data.reduce((acc, cv) => {
   const { country, place, location, temperature } = cv;
   const rearrangedPlace = {};
   rearrangedPlace[place] = {
@@ -118,11 +112,10 @@ const result3 = data2.reduce((acc, cv) => {
   return acc;
 }, []);
 
-console.log(result3);
-*/
+// console.log(result3);
 
 // Q. 4
-/*
+
 const newData4 = data.reduce((acc, cv) => {
   let { place, temperature, ...rest } = cv;
   if (place === "Pretoria") temperature = "49 Degree Celsius";
@@ -135,11 +128,9 @@ const newData4 = data.reduce((acc, cv) => {
   return acc;
 }, []);
 
-console.log(newData4);
-*/
+// console.log(newData4);
 
 // Q. 5
-/*
 const newData5 = data.reduce((acc, cv, ci) => {
   if (ci === 3) {
     acc.push({
@@ -156,11 +147,9 @@ const newData5 = data.reduce((acc, cv, ci) => {
   return acc;
 }, []);
 
-console.log(newData5);
-*/
+// console.log(newData5);
 
 // Q. 6
-/*
 const newData6 = data.reduce((acc, cv, ci) => {
   if (ci !== 2) {
     acc.push(cv);
@@ -168,8 +157,7 @@ const newData6 = data.reduce((acc, cv, ci) => {
   return acc;
 }, []);
 
-console.log(newData6);
-*/
+// console.log(newData6);
 
 // Q. 7
 
@@ -185,4 +173,4 @@ const newData7 = data.reduce((acc, cv, ci) => {
   return acc;
 }, []);
 
-console.log(newData7);
+// console.log(newData7);
